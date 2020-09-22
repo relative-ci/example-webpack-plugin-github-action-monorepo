@@ -4,6 +4,8 @@
   "description": "RelativeCI example app",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "keywords": [],
@@ -16,5 +18,23 @@
   "bugs": {
     "url": "https://github.com/relative-ci/example-webpack-app/issues"
   },
-  "homepage": "https://github.com/relative-ci/example-webpack-app#readme"
+  "homepage": "https://github.com/relative-ci/example-webpack-app#readme",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "autoprefixer": "^10.0.0",
+    "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^6.1.1",
+    "css-loader": "^4.3.0",
+    "cssnano": "^4.1.10",
+    "file-loader": "^6.1.0",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^0.11.2",
+    "postcss": "^8.0.7",
+    "postcss-loader": "^4.0.2",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
 }

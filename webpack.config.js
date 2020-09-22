@@ -1,0 +1,81 @@
+const path = require('path');
+const HtmlPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+
+const SRC_DIR = path.resolve(__dirname, 'src');
+const OUT_DIR = path.resolve(__dirname, 'dist');
+
+module.exports = (_, { mode }) => {
+  const isProduction = mode === 'production';
+
+  return {
+    context: SRC_DIR,
+    entry: './index.js',
+    output: {
+      path: OUT_DIR,
+      filename: isProduction ? '[name].[contenthash:5].js': '[name].js',
+    },
+    resolve: {
+      extensions: ['.jsx', '.js', '.json'],
+    },
+    module: {
+      rules: [
+        {
+          test: /\.jsx?$/,
+          loader: 'babel-loader',
+        },
+        {
+          test: /\.css$/,
+          use: [
+            {
+              loader: MiniCssExtractPlugin.loader,
+              options: {
+                hmr: !isProduction,
+              },
+            },
+            'css-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                postcssOptions: {
+                  plugins: [
+                    require('autoprefixer'),
+                    ... isProduction ? [require('cssnano')] : [],
+                  ],
+                },
+              },
+            },
+          ],
+        },
+        {
+          test: /\.(png|jpe?g|webp|gif)$/,
+          loader: 'file-loader',
+          options: {
+            name: isProduction ? '[path][name].[contenthash:5].[ext]' : '[path][name].[ext]',
+          },
+        },
+      ],
+    },
+    plugins: [
+      new HtmlPlugin({
+        template: './index.html',
+        filename: 'index.html',
+      }),
+      new MiniCssExtractPlugin({
+        filename: isProduction ? '[name].[contenthash:5].css': '[name].css',
+      }),
+      new CopyPlugin({
+        patterns: [
+          {
+            from: path.resolve(__dirname, 'public'),
+          },
+        ],
+      }),
+    ],
+    devServer: {
+      hot: true,
+      inline: true
+    }
+  };
+};
