@@ -1,4 +1,4 @@
-# example-app-webpack
+# example-react-webpack
 
 ## Setup
 

@@ -1,7 +1,7 @@
 {
-  "name": "example-webpack-app",
+  "name": "example-react-webpack",
   "version": "1.0.0",
-  "description": "RelativeCI example app",
+  "description": "RelativeCI React + Webpack example app",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
@@ -16,9 +16,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/relative-ci/example-webpack-app/issues"
+    "url": "https://github.com/relative-ci/example-react-webpack/issues"
   },
-  "homepage": "https://github.com/relative-ci/example-webpack-app#readme",
+  "homepage": "https://github.com/relative-ci/example-react-webpack#readme",
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
