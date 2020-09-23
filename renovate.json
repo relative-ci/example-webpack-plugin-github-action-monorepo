@@ -1,0 +1,8 @@
+{
+  "extends": ["config:base"],
+  "timezone": "CET",
+  "schedule": ["before 3am on Sunday"],
+  "baseBranches": ["update-dependencies"],
+  "automerge": true,
+  "branchPrefix": "renovate-"
+}
