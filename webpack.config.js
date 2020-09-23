@@ -12,7 +12,7 @@ module.exports = (_, { mode }) => {
 
   return {
     context: SRC_DIR,
-    entry: './index.js',
+    entry: './index.jsx',
     output: {
       path: OUT_DIR,
       filename: isProduction ? '[name].[contenthash:5].js': '[name].js',
