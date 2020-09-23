@@ -7,9 +7,7 @@ import data from './data.json';
 import './index.css';
 
 const App = () => (
-  <Layout
-    title="RelativeCI examples"
-  >
+  <Layout>
     <Examples data={data} />
   </Layout>
 );
