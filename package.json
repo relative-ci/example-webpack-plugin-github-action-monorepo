@@ -1,7 +1,7 @@
 {
-  "name": "example-react-webpack",
+  "name": "example-webpack-plugin-github-action",
   "version": "1.0.0",
-  "description": "RelativeCI React + Webpack example app",
+  "description": "@relative-ci/agent webpack plugin setup example for Github Action",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
