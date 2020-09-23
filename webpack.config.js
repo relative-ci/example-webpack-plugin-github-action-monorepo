@@ -25,6 +25,7 @@ module.exports = (_, { mode }) => {
         {
           test: /\.jsx?$/,
           loader: 'babel-loader',
+          include: [SRC_DIR],
         },
         {
           test: /\.css$/,
@@ -48,6 +49,7 @@ module.exports = (_, { mode }) => {
               },
             },
           ],
+          include: [SRC_DIR],
         },
         {
           test: /\.(png|jpe?g|webp|gif)$/,
@@ -55,6 +57,7 @@ module.exports = (_, { mode }) => {
           options: {
             name: isProduction ? '[path][name].[contenthash:5].[ext]' : '[path][name].[ext]',
           },
+          include: [SRC_DIR],
         },
       ],
     },
