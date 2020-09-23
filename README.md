@@ -1,5 +1,7 @@
 # example-react-webpack
 
+[![RelativeCI](https://badges.relative-ci.com/badges/7OUGcZsX5e4QBYcecng1?branch=master)](https://app.relative-ci.com/projects/7OUGcZsX5e4QBYcecng1)
+
 ## Setup
 
 Basic webpack setup:
