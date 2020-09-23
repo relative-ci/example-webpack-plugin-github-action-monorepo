@@ -1,0 +1,8 @@
+.root {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.main {
+  padding: 24px;
+}

@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import { Examples } from './components/examples';
 import { Layout } from './components/layout';
+import data from './data.json';
 import './index.css';
 
 const App = () => (
   <Layout
     title="RelativeCI examples"
   >
-    Examples
+    <Examples data={data} />
   </Layout>
 );
 
