@@ -59,6 +59,10 @@ module.exports = (_, { mode }) => {
           },
           include: [SRC_DIR],
         },
+        {
+          test: /\.inline.svg$/,
+          use: ['@svgr/webpack'],
+        }
       ],
     },
     plugins: [

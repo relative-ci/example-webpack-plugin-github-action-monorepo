@@ -11,3 +11,4 @@ Basic webpack setup:
 - assets:
   - `public` - copy-webpack-plugin
   - `src` - file-loader
+  - `inline.svg` - svgr
