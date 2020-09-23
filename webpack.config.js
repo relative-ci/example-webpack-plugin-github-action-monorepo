@@ -65,6 +65,17 @@ module.exports = (_, { mode }) => {
         }
       ],
     },
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          commons: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all'
+          },
+        },
+      },
+    },
     plugins: [
       new HtmlPlugin({
         template: './index.html',
