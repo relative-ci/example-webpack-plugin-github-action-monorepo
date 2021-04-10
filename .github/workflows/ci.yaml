@@ -2,8 +2,8 @@ name: ci
 
 on: 
   push:
-    - branches:
-        - master
+    branches:
+      - master
   pull_request_target:
 
 jobs:
