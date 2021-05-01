@@ -20,8 +20,8 @@
   },
   "homepage": "https://github.com/relative-ci/example-react-webpack#readme",
   "devDependencies": {
-    "@babel/core": "7.13.16",
-    "@babel/preset-env": "7.13.15",
+    "@babel/core": "7.14.0",
+    "@babel/preset-env": "7.14.0",
     "@babel/preset-react": "7.13.13",
     "@relative-ci/agent": "1.5.1-beta.2",
     "@svgr/webpack": "5.5.0",
