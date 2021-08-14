@@ -6,6 +6,7 @@ const { RelativeCiAgentWebpackPlugin } = require('@relative-ci/agent');
 
 const SRC_DIR = path.resolve(__dirname, 'src');
 const OUT_DIR = path.resolve(__dirname, 'dist');
+const ARTIFACTS_DIR = path.resolve(__dirname, 'artifacts');
 
 module.exports = (_, { mode }) => {
   const isProduction = mode === 'production';
@@ -94,7 +95,9 @@ module.exports = (_, { mode }) => {
           },
         ],
       }),
-      new RelativeCiAgentWebpackPlugin(),
+      new RelativeCiAgentWebpackPlugin({
+        payloadFilepath: path.join(ARTIFACTS_DIR, 'relative-ci-payload.json'),
+      }),
     ],
     devServer: {
       hot: true,
