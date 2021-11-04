@@ -3,8 +3,11 @@ name: ci
 on: push
 
 jobs:
-  build:
+  build-webapp-1:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: webapp-1 
 
     strategy:
       matrix:
@@ -12,8 +15,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
-      - run: cd webapp-1
 
       - name: Cache node modules
         uses: actions/cache@v2
@@ -34,7 +35,7 @@ jobs:
 
       - run: npm ci
 
-      - name: Build webapp-1
+      - name: Build
         run: npm run build --if-present
         env:
           RELATIVE_CI_KEY: ${{ secrets.WEBAPP_1_RELATIVE_CI_KEY }}
@@ -43,5 +44,5 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: artifacts
-          path: artifacts
+          name: artifacts-webapp-1
+          path: webpapp-1/artifacts
