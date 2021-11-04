@@ -13,6 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - run: cd webapp-1
+
       - name: Cache node modules
         uses: actions/cache@v2
         env:
@@ -32,9 +34,10 @@ jobs:
 
       - run: npm ci
 
-      - run: npm run build --if-present
+      - name: Build webapp-1
+        run: npm run build --if-present
         env:
-          RELATIVE_CI_KEY: ${{ secrets.RELATIVE_CI_KEY }}
+          RELATIVE_CI_KEY: ${{ secrets.WEBAPP_1_RELATIVE_CI_KEY }}
           DEBUG: ${{ secrets.DEBUG }}
 
       - name: Upload artifacts
