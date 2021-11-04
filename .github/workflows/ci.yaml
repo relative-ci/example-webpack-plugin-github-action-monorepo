@@ -46,3 +46,47 @@ jobs:
         with:
           name: artifacts-webapp-1
           path: webapp-1/artifacts
+
+  build-webapp-2:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: webapp-2
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Cache node modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm # npm cache files are stored in `~/.npm` on Linux/macOS
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - run: npm ci
+
+      - name: Build
+        run: npm run build --if-present
+        env:
+          RELATIVE_CI_KEY: ${{ secrets.WEBAPP_2_RELATIVE_CI_KEY }}
+          DEBUG: ${{ secrets.DEBUG }}
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: artifacts-webapp-2
+          path: webapp-2/artifacts

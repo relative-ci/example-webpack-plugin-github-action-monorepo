@@ -1,0 +1,47 @@
+{
+  "name": "example-webpack-plugin-github-action",
+  "version": "1.0.0",
+  "description": "@relative-ci/agent webpack plugin setup example for Github Action",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack --mode production --json > artifacts/webpack-stats.json",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Viorel Cojocaru",
+    "email": "vio@relative-ci.com",
+    "url": "https://relative-ci.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/relative-ci/example-react-webpack/issues"
+  },
+  "homepage": "https://github.com/relative-ci/example-react-webpack#readme",
+  "devDependencies": {
+    "@babel/core": "7.14.0",
+    "@babel/preset-env": "7.14.1",
+    "@babel/preset-react": "7.13.13",
+    "@relative-ci/agent": "2.1.0",
+    "@svgr/webpack": "5.5.0",
+    "autoprefixer": "10.2.5",
+    "babel-loader": "8.2.2",
+    "copy-webpack-plugin": "8.1.1",
+    "css-loader": "5.2.4",
+    "cssnano": "5.0.2",
+    "file-loader": "6.2.0",
+    "html-webpack-plugin": "5.3.1",
+    "mini-css-extract-plugin": "1.2.1",
+    "postcss": "8.2.14",
+    "postcss-loader": "5.2.0",
+    "webpack": "5.36.2",
+    "webpack-cli": "4.7.0",
+    "webpack-dev-server": "3.11.2"
+  },
+  "dependencies": {
+    "antd": "^4.6.5",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  }
+}
