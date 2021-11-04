@@ -44,5 +44,5 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: artifacts
-          path: artifacts
+          name: artifacts-webapp-1
+          path: webpapp-1/artifacts
