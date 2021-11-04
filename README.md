@@ -1,9 +1,9 @@
-# example-webpack-plugin-github-action
+# example-webpack-plugin-github-action-monorepo
 
-[![ci](https://github.com/relative-ci/example-webpack-plugin-github-action/workflows/ci/badge.svg)](https://github.com/relative-ci/example-webpack-plugin-github-action/actions?query=workflow%3Aci)
-[![RelativeCI](https://badges.relative-ci.com/badges/7OUGcZsX5e4QBYcecng1?branch=master)](https://app.relative-ci.com/projects/7OUGcZsX5e4QBYcecng1)
+[![ci](https://github.com/relative-ci/example-webpack-plugin-github-action-monorepo/workflows/ci/badge.svg)](https://github.com/relative-ci/example-webpack-plugin-github-action-monorepo/actions?query=workflow%3Aci)
+[![RelativeCI](https://badges.relative-ci.com/badges/GYnRkwf55sjSprt5rTVK?branch=master)](https://app.relative-ci.com/projects/GYnRkwf55sjSprt5rTVK)
 
-> [@relative-ci/agent](https://github.com/relative-ci/agent) webpack plugin setup example for [Github Action](https://github.com/features/actions)
+> [@relative-ci/agent](https://github.com/relative-ci/agent) webpack plugin setup example for [Github Action](https://github.com/features/actions) on a monorepo
 
 
 ## Example app
