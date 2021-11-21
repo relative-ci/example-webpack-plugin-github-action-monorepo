@@ -29,7 +29,7 @@
     "babel-loader": "8.2.3",
     "copy-webpack-plugin": "9.1.0",
     "css-loader": "6.5.1",
-    "cssnano": "5.0.10",
+    "cssnano": "5.0.11",
     "file-loader": "6.2.0",
     "html-webpack-plugin": "5.5.0",
     "mini-css-extract-plugin": "1.2.1",
