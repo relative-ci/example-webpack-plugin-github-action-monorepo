@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack --mode production --json > artifacts/webpack-stats.json",
+    "build": "webpack --mode production --json artifacts/webpack-stats.json",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "keywords": [],

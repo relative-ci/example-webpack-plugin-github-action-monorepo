@@ -102,6 +102,12 @@ module.exports = (_, { mode }) => {
     devServer: {
       hot: true,
       inline: true
+    },
+    stats: {
+      assets: true,
+      entrypoints: true,
+      chunks: true,
+      modules: true
     }
   };
 };
