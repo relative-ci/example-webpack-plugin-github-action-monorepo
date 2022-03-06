@@ -42,7 +42,7 @@ jobs:
           DEBUG: ${{ secrets.DEBUG }}
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: artifacts-webapp-1
           path: webapp-1/artifacts
@@ -86,7 +86,7 @@ jobs:
           DEBUG: ${{ secrets.DEBUG }}
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: artifacts-webapp-2
           path: webapp-2/artifacts
