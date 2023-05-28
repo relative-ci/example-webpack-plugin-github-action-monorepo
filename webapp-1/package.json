@@ -24,7 +24,7 @@
     "@babel/preset-env": "7.22.2",
     "@babel/preset-react": "7.22.3",
     "@relative-ci/agent": "4.1.4",
-    "@svgr/webpack": "7.0.0",
+    "@svgr/webpack": "8.0.1",
     "autoprefixer": "10.4.14",
     "babel-loader": "9.1.2",
     "copy-webpack-plugin": "11.0.0",
