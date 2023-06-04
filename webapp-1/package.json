@@ -21,7 +21,7 @@
   "homepage": "https://github.com/relative-ci/example-react-webpack#readme",
   "devDependencies": {
     "@babel/core": "7.22.1",
-    "@babel/preset-env": "7.22.2",
+    "@babel/preset-env": "7.22.4",
     "@babel/preset-react": "7.22.3",
     "@relative-ci/agent": "4.1.4",
     "@svgr/webpack": "8.0.1",
