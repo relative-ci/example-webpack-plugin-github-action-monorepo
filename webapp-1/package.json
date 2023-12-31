@@ -23,7 +23,7 @@
     "@babel/core": "7.23.7",
     "@babel/preset-env": "7.23.7",
     "@babel/preset-react": "7.23.3",
-    "@relative-ci/agent": "4.2.2",
+    "@relative-ci/agent": "4.2.3",
     "@svgr/webpack": "8.1.0",
     "autoprefixer": "10.4.16",
     "babel-loader": "9.1.3",
