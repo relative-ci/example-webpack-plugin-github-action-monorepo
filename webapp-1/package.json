@@ -20,8 +20,8 @@
   },
   "homepage": "https://github.com/relative-ci/example-react-webpack#readme",
   "devDependencies": {
-    "@babel/core": "8.0.1",
-    "@babel/preset-env": "8.0.2",
+    "@babel/core": "8.0.5",
+    "@babel/preset-env": "8.0.5",
     "@babel/preset-react": "8.0.1",
     "@relative-ci/agent": "4.3.1",
     "@svgr/webpack": "8.1.0",
